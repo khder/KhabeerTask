@@ -22,7 +22,7 @@
 /**
  * 
  */
-package com.va.khabeertask;
+package com.va.khabeertask.ui;
 
 import java.util.List;
 

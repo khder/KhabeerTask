@@ -19,7 +19,7 @@
  * limitations under the License.
  */
 
-package com.va.khabeertask;
+package com.va.khabeertask.ui;
 
 import android.content.Context;
 import android.graphics.Canvas;

@@ -1,8 +1,8 @@
 /*
- * IChart.java
+ * IHasColor.java
  * Android-Charts
  *
- * Created by limc on 2011/05/29.
+ * Created by limc on 2014.
  *
  * Copyright 2011 limc.cn All rights reserved.
  *
@@ -19,22 +19,32 @@
  * limitations under the License.
  */
 
-package com.va.khabeertask;
+package com.va.khabeertask.ui;
 
 /**
  * <p>
- * Interface for all charts
+ * en
  * </p>
  * <p>
- * 全部チャートのベースインタフェース。
+ * jp
  * </p>
  * <p>
- * 所有图表对象的接口
+ * cn
  * </p>
  * 
  * @author limc
- * @version v1.0 2011/05/29 15:17:50
+ * @version v1.0 2014/03/18 15:15:37
  * 
  */
-public interface IChart {
+public interface IHasColor {
+	/**
+	 * @return the color
+	 */
+	int getColor();
+
+	/**
+	 * @param color
+	 *            the color to set
+	 */
+	void setColor(int color);
 }
