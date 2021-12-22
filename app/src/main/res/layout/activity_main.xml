@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- top toolbar !-->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/ic_arrow_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back"
+            android:layout_gravity="left"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/employee_salary"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_18"/>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Center Background !-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/top_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardCornerRadius="@dimen/corner_radius_16">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/profile_avatar"
+                android:layout_width="@dimen/size_100"
+                android:layout_height="@dimen/size_100"
+                android:src="@drawable/profile_avatar"
+                android:layout_gravity="right"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_16"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="سبتمبر ، ٢٠١٩ "
+                android:textStyle="bold"
+                android:textColor="@color/text_gey"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:textSize="@dimen/text_size_18"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_avatar"
+                app:layout_constraintRight_toRightOf="@id/profile_avatar"
+                app:layout_constraintLeft_toLeftOf="@id/profile_avatar"
+                />
+
+            <TextView
+                android:id="@+id/doctor_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:textStyle="bold"
+                android:textColor="@color/text_gey"
+                android:textSize="@dimen/text_size_20"
+                app:layout_constraintRight_toLeftOf="@id/profile_avatar"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/profile_avatar"
+                tools:text="محمد عزب محمد"
+                />
+
+            <TextView
+                android:id="@+id/doctor_specialist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:textStyle="bold"
+                android:textColor="@color/text_gey"
+                android:textSize="@dimen/text_size_20"
+                app:layout_constraintRight_toLeftOf="@id/profile_avatar"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/doctor_name"
+                tools:text="طبيب اختصاصى مسالك بولية"
+                />
+
+            <TextView
+                android:id="@+id/doctor_total_salary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:textStyle="bold"
+                android:textColor="@color/light_blue"
+                android:textSize="@dimen/text_size_20"
+                android:text="@string/total_salary"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toRightOf="@id/doctor_total_salary_value"
+                app:layout_constraintRight_toLeftOf="@id/profile_avatar"
+                app:layout_constraintTop_toBottomOf="@id/doctor_specialist"
+                />
+
+            <TextView
+                android:id="@+id/doctor_total_salary_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size_20"
+                android:layout_marginRight="@dimen/margin_10"
+                android:text="347.20-"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/doctor_total_salary"
+                app:layout_constraintTop_toBottomOf="@id/doctor_specialist"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/size_20"
+                android:layout_height="@dimen/size_20"
+                android:src="@drawable/ic_price_sign"
+                android:layout_marginRight="@dimen/margin_5"
+                app:layout_constraintRight_toLeftOf="@id/doctor_total_salary_value"
+                app:layout_constraintBottom_toBottomOf="@id/doctor_total_salary_value"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10"
+        app:layout_constraintTop_toBottomOf="@id/top_card"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:cardCornerRadius="@dimen/corner_radius_16">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/entitlements_square_view"
+                android:layout_width="@dimen/size_20"
+                android:layout_height="@dimen/size_20"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_20"
+                android:background="@color/dark_blue"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/entitlements_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_red"
+            android:textSize="@dimen/text_size_20"
+            android:text="773.23"
+            android:layout_marginRight="@dimen/margin_10"
+            app:layout_constraintRight_toLeftOf="@id/entitlements_square_view"
+            app:layout_constraintTop_toTopOf="@id/entitlements_square_view"
+            app:layout_constraintBottom_toBottomOf="@id/entitlements_square_view"/>
+
+            <ImageView
+                android:id="@+id/ic_price_sign"
+                android:layout_width="@dimen/size_20"
+                android:layout_height="@dimen/size_20"
+                android:src="@drawable/ic_price_sign"
+                android:layout_marginRight="@dimen/margin_5"
+                app:layout_constraintRight_toLeftOf="@id/entitlements_value"
+                app:layout_constraintBottom_toBottomOf="@id/entitlements_value"/>
+
+            <TextView
+                android:id="@+id/entitlements_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_20"
+                android:text="@string/entitlements"
+                android:layout_marginRight="@dimen/margin_10"
+                app:layout_constraintRight_toLeftOf="@id/ic_price_sign"
+                app:layout_constraintBottom_toBottomOf="@id/ic_price_sign"/>
+
+
+            <View
+                android:id="@+id/deductions_square_view"
+                android:layout_width="@dimen/size_20"
+                android:layout_height="@dimen/size_20"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_20"
+                android:background="@color/dark_yellow"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/entitlements_square_view"/>
+
+            <TextView
+                android:id="@+id/deductions_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size_20"
+                android:text="1120.43"
+                android:layout_marginRight="@dimen/margin_10"
+                app:layout_constraintRight_toLeftOf="@id/deductions_square_view"
+                app:layout_constraintTop_toTopOf="@id/deductions_square_view"
+                app:layout_constraintBottom_toBottomOf="@id/deductions_square_view"/>
+
+            <ImageView
+                android:id="@+id/ic_deductions_price_sign"
+                android:layout_width="@dimen/size_20"
+                android:layout_height="@dimen/size_20"
+                android:src="@drawable/ic_price_sign"
+                android:layout_marginRight="@dimen/margin_5"
+                app:layout_constraintRight_toLeftOf="@id/deductions_value"
+                app:layout_constraintBottom_toBottomOf="@id/deductions_value"/>
+
+            <TextView
+                android:id="@+id/deductions_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_20"
+                android:text="@string/deductions"
+                android:layout_marginRight="@dimen/margin_10"
+                app:layout_constraintRight_toLeftOf="@id/ic_deductions_price_sign"
+                app:layout_constraintBottom_toBottomOf="@id/ic_deductions_price_sign"/>
+
+            <View
+                android:id="@+id/line_below_deductions"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_1"
+                android:background="@color/grey_line"
+                android:layout_marginTop="@dimen/margin_16"
+                app:layout_constraintLeft_toLeftOf="@id/entitlements_text"
+                app:layout_constraintRight_toRightOf="@id/deductions_square_view"
+                app:layout_constraintTop_toBottomOf="@id/deductions_square_view"/>
+
+
+            <View
+                android:id="@+id/total_salary_square_view"
+                android:layout_width="@dimen/size_20"
+                android:layout_height="@dimen/size_20"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_16"
+                android:background="@color/dark_green"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line_below_deductions"/>
+
+            <TextView
+                android:id="@+id/total_salary_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size_20"
+                android:text="347.20-"
+                android:layout_marginRight="@dimen/margin_10"
+                app:layout_constraintRight_toLeftOf="@id/total_salary_square_view"
+                app:layout_constraintTop_toTopOf="@id/total_salary_square_view"
+                app:layout_constraintBottom_toBottomOf="@id/total_salary_square_view"/>
+
+            <ImageView
+                android:id="@+id/ic_total_salary_price_sign"
+                android:layout_width="@dimen/size_20"
+                android:layout_height="@dimen/size_20"
+                android:src="@drawable/ic_price_sign"
+                android:layout_marginRight="@dimen/margin_5"
+
+                app:layout_constraintRight_toLeftOf="@id/total_salary_value"
+                app:layout_constraintBottom_toBottomOf="@id/total_salary_value"/>
+
+            <TextView
+                android:id="@+id/total_salary_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_20"
+                android:text="@string/total_salary_without_colon"
+                android:layout_marginRight="@dimen/margin_10"
+                app:layout_constraintRight_toLeftOf="@id/ic_total_salary_price_sign"
+                app:layout_constraintBottom_toBottomOf="@id/ic_total_salary_price_sign"/>
+
+            <com.va.khabeertask.PieChart
+                android:layout_width="@dimen/size_100"
+                android:layout_height="@dimen/size_100"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/entitlements_text"
+                app:layout_constraintRight_toLeftOf="@id/entitlements_text"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/margin_10"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:cardCornerRadius="@dimen/margin_10"
+                app:strokeColor="@color/light_blue_line"
+                app:strokeWidth="@dimen/size_2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/total_salary_value">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/row_light_blue">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textStyle="bold"
+                        android:text="@string/value"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@drawable/cell_shape"
+                        android:textSize="@dimen/text_size_20"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_60"
+                        android:textStyle="bold"
+                        android:text="@string/item"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:textSize="@dimen/text_size_20"
+                        android:textColor="@color/white"/>
+
+                    <ImageView
+                        android:layout_height="@dimen/size_20"
+                        android:layout_width="@dimen/size_20"
+                        android:src="@drawable/meem_sign"
+                        android:layout_weight="0.5"
+                        android:layout_gravity="center"
+                        android:background="@drawable/cell_shape" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_height="@dimen/height_60"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:background="@drawable/cell_shape">
+                        <ImageView
+                            android:layout_width="@dimen/size_20"
+                            android:layout_height="@dimen/size_20"
+                            android:src="@drawable/ic_black_price_sign"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/margin_2"
+                            android:layout_marginRight="@dimen/margin_5" />
+                        <TextView
+                            android:id="@+id/first_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/height_60"
+                            android:text="@string/value"
+                            android:gravity="center"
+                            android:textSize="@dimen/text_size_20"
+                            android:textColor="@color/black"
+                            tools:text="673.23"/>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/first_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/item"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:textSize="@dimen/text_size_20"
+                        android:textColor="@color/black"
+                        tools:text="مرتب اساسى"/>
+
+                    <TextView
+                        android:id="@+id/first_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/cell_shape"
+                        android:textSize="@dimen/text_size_20"
+                        android:textColor="@color/black"
+                        tools:text="1"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/second_row_light_blue"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_height="@dimen/height_60"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:background="@drawable/cell_shape">
+                    <ImageView
+                        android:layout_width="@dimen/size_20"
+                        android:layout_height="@dimen/size_20"
+                        android:src="@drawable/ic_black_price_sign"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_2"
+                        android:layout_marginRight="@dimen/margin_5" />
+
+                    <TextView
+                        android:id="@+id/second_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_60"
+                        android:text="@string/value"
+                        android:gravity="center"
+                        android:textSize="@dimen/text_size_20"
+                        android:textColor="@color/black"
+                        tools:text="673.23"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/second_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/item"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:textSize="@dimen/text_size_20"
+                        android:textColor="@color/black"
+                        tools:text="مرتب اساسى"/>
+
+                    <TextView
+                        android:id="@+id/second_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/cell_shape"
+                        android:textSize="@dimen/text_size_20"
+                        android:textColor="@color/black"
+                        tools:text="2"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/third_row_light_red"
+                    >
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_height="@dimen/height_60"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:background="@drawable/cell_shape">
+
+                        <View
+                            android:layout_width="@dimen/size_100"
+                            android:layout_height="@dimen/height_1"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:background="@color/black"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+
+                    <ImageView
+                        android:id="@+id/third_value_price_sign"
+                        android:layout_width="@dimen/size_20"
+                        android:layout_height="@dimen/size_20"
+                        android:src="@drawable/ic_black_price_sign"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_2"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/third_value"/>
+
+                    <TextView
+                        android:id="@+id/third_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_60"
+                        android:text="@string/value"
+                        android:gravity="center"
+                        android:textSize="@dimen/text_size_20"
+                        android:textColor="@color/black"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/third_value_price_sign"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        tools:text=" 1120.43"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/third_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/item"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape"
+                        android:textSize="@dimen/text_size_20"
+                        android:textColor="@color/black"
+                        tools:text="استقطاعات اخرى"/>
+
+                    <TextView
+                        android:id="@+id/third_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/cell_shape"
+                        android:textSize="@dimen/text_size_20"
+                        android:textColor="@color/black"
+                        tools:text="3"/>
+
+                </TableRow>
+
+
+
+            </TableLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

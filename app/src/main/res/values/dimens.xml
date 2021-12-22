@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- text sizes !-->
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+
+
+    <!-- margins !-->
+    <dimen name="margin_2">2dp</dimen>
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+
+    <!-- corner radius !-->
+    <dimen name="corner_radius_16">16dp</dimen>
+
+    <!-- sizes !-->
+    <dimen name="size_100">100dp</dimen>
+    <dimen name="size_20">20dp</dimen>
+    <dimen name="size_2">2dp</dimen>
+    <dimen name="height_1">1dp</dimen>
+    <dimen name="height_60">60dp</dimen>
+
+</resources>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">KhabeerTask</string>
+    <string name="employee_salary">راتب الموظف</string>
+    <string name="total_salary">اجمالى الراتب :</string>
+    <string name="total_salary_without_colon">اجمالى الراتب</string>
+    <string name="entitlements">الاستحقاقات</string>
+    <string name="deductions">الاستقطاعات</string>
+    <string name="item">البند</string>
+    <string name="value">القيمة</string>
+</resources>
