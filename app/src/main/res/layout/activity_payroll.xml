@@ -250,7 +250,6 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size_20"
                 android:text="@string/deductions"
-                android:layout_marginRight="@dimen/margin_10"
                 app:layout_constraintRight_toLeftOf="@id/ic_deductions_price_sign"
                 app:layout_constraintBottom_toBottomOf="@id/ic_deductions_price_sign"/>
 
