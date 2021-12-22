@@ -30,6 +30,10 @@ public class PayrollActivity extends AppCompatActivity {
         binding = ActivityPayrollBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         initViewModel();
+        List<TitleValueColorEntity> pieChartData = new ArrayList();
+        pieChartData.add(new TitleValueColorEntity("",40.8f,getResources().getColor(R.color.dark_blue)));
+        pieChartData.add(new TitleValueColorEntity("",59.2f,getResources().getColor(R.color.dark_yellow)));
+        binding.pieChart.setData(pieChartData);
     }
     private void initViewModel(){
         payRollViewModel =
@@ -44,10 +48,6 @@ public class PayrollActivity extends AppCompatActivity {
     }
 
     private void bindData(PayRoll payRoll){
-        List<TitleValueColorEntity> pieChartData = new ArrayList();
-        pieChartData.add(new TitleValueColorEntity("",40.8f,getResources().getColor(R.color.dark_blue)));
-        pieChartData.add(new TitleValueColorEntity("",59.2f,getResources().getColor(R.color.dark_yellow)));
-        binding.pieChart.setData(pieChartData);
 
         binding.doctorName.setText(payRoll.getEmployeeName());
         binding.doctorSpecialist.setText(payRoll.getEmployeeSpecialist());
